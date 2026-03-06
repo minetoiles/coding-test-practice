@@ -42,16 +42,16 @@
 # 📝 Commit Convention
 
 ```
-Solve BOJ Sprout problems (YYYY-MM-DD)
-Solve BOJ Bronze problems (YYYY-MM-DD)
-Solve BOJ Silver problems (YYYY-MM-DD)
-Solve BOJ Gold problems (YYYY-MM-DD)
+[BOJ] Solve Sprout problems (YYYY-MM-DD)
+[BOJ] Solve Bronze problems (YYYY-MM-DD)
+[BOJ] Solve Silver problems (YYYY-MM-DD)
+[BOJ] Solve Gold problems (YYYY-MM-DD)
 ```
 
 Example
 
 ```
-Solve BOJ Sprout problems (2026-03-06)
+[BOJ] Solve Sprout problems (2026-03-06)
 ```
 
 ---
