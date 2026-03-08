@@ -60,7 +60,7 @@ Example
 
 * BOJ : https://www.acmicpc.net/
 * Programmers : https://programmers.co.kr/
-* Blog : https://your-blog-url
+* Blog : https://velog.io/@wendy9253/posts
 
 ---
 
