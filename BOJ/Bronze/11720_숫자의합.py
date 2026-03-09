@@ -1,3 +1,6 @@
+# BOJ 11720 숫자의 합
+# 몫은 //
+
 n = int(input())
 sum = 0
 a = int(input())
