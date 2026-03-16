@@ -1,3 +1,7 @@
+# BOJ 1920 수 찾기
+# 이분 탐색 문제
+# 집합 사용하면 더 빠르게 풀 수 있다고 함..
+
 import sys
 num1 = int(input())
 list1 = list(map(int, sys.stdin.readline().split()))
