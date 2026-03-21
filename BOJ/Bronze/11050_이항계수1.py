@@ -1,5 +1,4 @@
-n = int(input())
-k = int(input())
+n, k = map(int, input().split())
 
 def calc(n, k):
     if (k == 0 or k == n):
