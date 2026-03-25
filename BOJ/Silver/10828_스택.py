@@ -1,3 +1,8 @@
+# BOJ 10828 스택
+
+import sys
+input = sys.stdin.readline
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -9,10 +14,6 @@ class Stack:
         self.count = 0
 
     def push(self, data):
-        if self.top is None:
-            self.top = Node(data)
-            self.count += 1
-            return
         node = Node(data)
         node.next = self.top
         self.top = node
@@ -28,32 +29,33 @@ class Stack:
 
     def peek(self):
         if self.top is None:
-            return None
+            return -1
         return self.top.data
 
     def is_empty(self):
-        return self.top is None
-    
+        return 1 if self.top is None else 0
+
     def size(self):
         return self.count
 
 
-if __name__ == "__main__":
-    s = Stack()
-    
-    n = int(input())
-    for i in range(n):
-        cmd = input()
-    
-        if (cmd == "push"):
-            command, num = cmd.split()
-            number = int(num)
-            s.push(number)
-        elif (cmd == "pop"):
-            print(s.pop())
-        elif (cmd == "size"):
-            print(s.size())
-        elif (cmd == "empty"):
-            print(s.is_empty())
-        elif (cmd == "top"):
-            print(s.peek())
+s = Stack()
+n = int(input())
+
+result = []
+
+for _ in range(n):
+    cmd = input().split()
+
+    if cmd[0] == "push":
+        s.push(int(cmd[1]))
+    elif cmd[0] == "pop":
+        result.append(str(s.pop()))
+    elif cmd[0] == "size":
+        result.append(str(s.size()))
+    elif cmd[0] == "empty":
+        result.append(str(s.is_empty()))
+    elif cmd[0] == "top":
+        result.append(str(s.peek()))
+
+print("\n".join(result))
