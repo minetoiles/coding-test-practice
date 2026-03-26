@@ -1,3 +1,5 @@
+# BOJ 10814 나이순정렬
+
 import sys
 n = int(input())
 
