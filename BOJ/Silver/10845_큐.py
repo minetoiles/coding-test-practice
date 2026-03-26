@@ -1,5 +1,7 @@
-#BOJ 10845 큐
-
+# BOJ 10845 큐
+# 문제 조건을 잘 읽자
+# 시간 초과 방지를 위해 sys사용, 출력 한 번에
+# deque 함수 공부...
 import sys
 input = sys.stdin.readline
 from collections import deque
@@ -26,12 +28,18 @@ for i in range (n):
         else:
             result.append("0")
     elif (cmd[0] == "front"):
-        num = q.popleft()
-        result.append(str(num))
-        q.appendleft(num)
+        if (len(q) == 0):
+            result.append("-1")
+        else:
+            num = q.popleft()
+            result.append(str(num))
+            q.appendleft(num)
     elif (cmd[0] == "back"):
-        num = q.pop()
-        result.append(str(num))
-        q.append(num)
+        if (len(q) == 0):
+            result.append("-1")
+        else:
+            num = q.pop()
+            result.append(str(num))
+            q.append(num)
 
 print("\n".join(result))
