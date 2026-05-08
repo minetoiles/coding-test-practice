@@ -3,21 +3,11 @@
 n, m = map(int, input().split())
 cards = list(map(int, input().split()))
 max_sum = 0
-sum = 0
-for i in range(n):
-    sum += cards[i]
-    for j in range(i+1, n):
-        if (sum >= m):
-            continue
-        sum += cards[j]
-        for k in range(j+1, n):
-            if (sum >= m):
-                continue
-            sum += cards[k]
-            if (max_sum < sum and sum <= m):
-                max_sum = sum
-    sum = 0     
-print(max_sum)
 
-            
-            
+for i in range(n):
+    for j in range(i+1, n):
+        for k in range(j+1, n):
+            sum = cards[i] + cards[j] + cards[k]
+            if (sum <= m and sum > max_sum):
+                max_sum = sum
+print(max_sum)

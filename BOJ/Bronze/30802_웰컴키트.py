@@ -1,4 +1,5 @@
 # BOJ 30802 웰컴키트
+
 n = int(input())
 tsize = list(map(int, input().split()))
 t, p = map(int, input().split())
