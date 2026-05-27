@@ -31,6 +31,7 @@ def solution(new_id):
     if (count != 0):
         answer = answer[:start_idx + 1]
     '''
+    
     while '..' in answer:
         answer = answer.replace('..', '.')
     
